@@ -11,7 +11,7 @@ const getMovies = function () {
   // This is the dynamic URL once the search bar and functionality has been set up
   // let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=${movieTitle}`;
 
-  let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=Blade+Runner+2049`;
+  let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=mulan`;
   fetch(apiUrl).then(function (response) {
     response.json().then(function (data) {
       console.log(data);
@@ -56,6 +56,7 @@ const displayMovies = function (movieData) {
   let moviePoster = document.createElement('img');
   moviePoster.setAttribute('src', poster);
   console.log(moviePoster);
+  movieDisplay.appendChild(moviePoster);
 
   console.log(movieInformationList);
 
