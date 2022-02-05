@@ -11,10 +11,10 @@ const getMovies = function () {
   // This is the dynamic URL once the search bar and functionality has been set up
   // let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=${movieTitle}`;
 
-  let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=mulan`;
+  let apiUrl = `http://www.omdbapi.com/?apikey=5205bbcf&t=Blade+Runner+2049`;
   fetch(apiUrl).then(function (response) {
     response.json().then(function (data) {
-      console.log(data);
+      // console.log(data);
       if (data.Response === 'False') {
         alert('Please enter a valid movie title');
       } else {
@@ -48,17 +48,17 @@ const displayMovies = function (movieData) {
   Object.values(movieObject).forEach((listItem) => {
     movieInformationItem = document.createElement('li');
     movieInformationItem.textContent = listItem;
-    console.log(listItem);
+    // console.log(listItem);
     movieInformationList.appendChild(movieInformationItem);
   });
 
   let poster = movieData.Poster;
   let moviePoster = document.createElement('img');
   moviePoster.setAttribute('src', poster);
-  console.log(moviePoster);
+  // console.log(moviePoster);
   movieDisplay.appendChild(moviePoster);
 
-  console.log(movieInformationList);
+  // console.log(movieInformationList);
 
   movieItem.appendChild(movieInformationList);
   movieShelf.appendChild(movieItem);
