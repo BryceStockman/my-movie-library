@@ -1,0 +1,16 @@
+img {
+    height: 500px;
+}
+
+
+#search {
+    width: 200px;
+}
+
+.to-watch {
+    margin: 5px 10px 0 0;
+}
+
+.watch {
+    margin: 5px 0 0 10px;
+}
