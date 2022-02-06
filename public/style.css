@@ -6,12 +6,12 @@
 
 
 body {
-    color: #ffffff;
+    color: #000000;
     font-family: Helvetica, Arial, sans-serif;
 }
 header {
-    padding: 20px 235px;
-    background-color: #74a8e2;
+    padding: 20px 20px;
+    background-color: #111661;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -23,14 +23,14 @@ header {
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color: #000000;
+    color: #ffffff;
     margin: 0;
     text-shadow: 0 0 10px rgba(10, 37, 78, 0.527);
 }
   
 header a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     left: -150px;
   }
 header nav {
@@ -51,8 +51,8 @@ header nav ul li a {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 header nav ul li a:hover {
-    background: #0d10a7;
-    color: #74a8e2;
+    background: #a1c8f5;
+    color: #111661;
     border-radius: 15px;
     text-shadow: none;
 }
@@ -67,8 +67,8 @@ section {
     align-items: flex-start
 }
 .hero-form {
-  border: 3px solid #0d10a7;
-  background-color: #ffffff;
+  border: 3px solid #111661;
+  background-color: #a1c8f5;
   padding: 20px;
   color: #000000;
   width: 40%;
@@ -90,54 +90,35 @@ section {
     margin: 0 auto;
     text-align: center
 }
-.continue-watching {
+.my-movies-lists {
   text-align: center;
+  background-color: #a1c8f5;
   font-size: 20px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start
+  align-items: flex-start;
 }
 
-.first-watching {
-  width: 90%;
+.movie-div {
+  width: 20%;
   height: 200px;
-  /* background-color: #fce138;
-  background-image: url("../images/run-buddy.jpg"); */
-  border-color: #0d10a7;
+  border-color: #111661;
   border-width: 2px;
-  margin: 0 auto 35px auto;
-}
-.second-watching {
-  width: 40%;
-  height: 100px;
-  /* background-color: #fce138;
-  background-image: url("../images/robot-gladiator.jpg"); */
-  border-color: #0d10a7;
-  border-width: 2px;
-  margin: 0 5% 35px auto;
+  margin: 20px 20px 20px 20px;
+  justify-content: Left;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .section-title {
-    font-size: 35px;
-    color: #a3a3a3;
-    border-bottom: 3px solid;
+    font-size: 25px;
+    color: #000000;
     padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 200%;
+    text-align: left;
+    width: 10%;
+    border-bottom: 5px solid #111661;
 }
-  
-.primary-border {
-    border-color: #0d10a7;
-}
-  
-.secondary-border {
-    border-color: #000000;
-}
-  
-
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {

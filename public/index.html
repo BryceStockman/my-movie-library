@@ -11,58 +11,56 @@
   <!-- navigation -->
   <header>
   <h1>My Movie Library</h1>
-    <nav><!-- Unordered list element -->
+    <nav>
       <ul>
-        <!-- List item element-->
         <li>
-            <a href="HTML/.html">Home Page</a>
+            <a>My Movies</a>
         </li>
+        <!-- Add link to search html page-->
         <li>
-            <a>Browse</a>
-        </li>
-        <li>
-            <a>My List</a>
-        </li>
-        <li>
-            <a>My Profile</a>
+            <a>Search</a>
         </li>
       </ul>
     </nav>
-    <nav><!-- Unordered list element -->
+    <nav>
         <ul>
-          <!-- List item element-->
           <li>
-              <a>Logout</a>
-          </li>
-          <li>
-              <a>Settings</a>
+              <!-- Login/Logout-->
+              <a>My Profile</a>
           </li>
         </ul>
       </nav>
   </header>
   <main> 
-      <section class="continue-watching">
+      <section id="to-watch" class="my-movies-lists">
             <div class="flex-row">
-                <h2 class="section-title primary-border">Continue Watching</h2>
+                <h2 class="section-title section-border">To Watch</h2>
             </div>
-            <!-- possibly turn into list element?-->
-            <div class="first-watching">
+            <!-- Hardcoded To watch movie divs-->
+            <div class="movie-div">
                 <a href="">
-                    <img src="images/" alt=""  class="movieimg"/>
+                    <img src="images/" alt=""  class="movieimg">ah
                 </a>
             </div>
-            <div class="second-watching">
+            <div class="movie-div">
                 <a href="">
-                    <img src="images/" alt=""  class="movieimg"/>
+                    <img src="images/" alt=""  class="movieimg"/>ah
                 </a>
             </div>
       </section>
-      
-      <section id="a-section">
+      <!-- Hardcoded watched movie divs-->
+      <section id="watched" class="my-movies-lists">
         <div class="flex-row">
-        <h2 class="section-title secondary-border">IDK</h2>
+        <h2 class="section-title section-border">Watched</h2>
+        <div class="movie-div">
+            <a href="">
+                <img src="images/" alt=""  class="movieimg"/>ah
+            </a>
         </div>
-          <p> This is some content</p>
+        <div class="movie-div">
+            <a href="">
+                <img src="images/" alt=""  class="movieimg"/>ah
+            </a>
         </div>
       </section>
   </main>
