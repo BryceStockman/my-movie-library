@@ -7,13 +7,13 @@ const unfilledStar =
 stars.map((star) => {
   star.addEventListener('click', () => {
     i = stars.indexOf(star);
-    e = stars.indexOf(star);
-    console.log(stars[i]);
-    console.log(i);
+    e = stars.indexOf(star) + 1;
 
-    for (i; i >= 0; --i)
+    for (i; i >= 0; --i) {
       stars[i].firstElementChild.setAttribute('d', filledStar);
-    for (e; e < stars.length; ++e) console.log(stars[e]);
-    stars[e].firstElementChild.setAttribute('d', unfilledStar);
+    }
+    for (e; e < stars.length; ++e) {
+      stars[e].firstElementChild.setAttribute('d', unfilledStar);
+    }
   });
 });
