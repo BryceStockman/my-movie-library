@@ -6,25 +6,38 @@
 
 
 body {
-    color: #000000;
-    font-family: Helvetica, Arial, sans-serif;
+  background-color: #d6e4f5;
+  color: #ffffff;
+  font-family: Monaco;
 }
 header {
     padding: 20px 20px;
-    background-color: #111661;
-    display: flex;
+    background-color: #74a8e2;
     justify-content: space-between;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    z-index: 9999;
+    height: 75px;
+
+     position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 80%;
+  z-index: 9999;
   }
-header h1 {
+  h1 {
+    margin-left: 10px;
+    font-family: georgia;
+    font-size: 40px;
     font-weight: bold;
-    font-size: 36px;
-    color: #ffffff;
-    margin: 0;
+    color: 000000;
     text-shadow: 0 0 10px rgba(10, 37, 78, 0.527);
 }
   
@@ -47,11 +60,12 @@ header nav ul {
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-family: Monaco;
+    font-size: 20px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 header nav ul li a:hover {
-    background: #a1c8f5;
+    background: #d6e4f5;
     color: #111661;
     border-radius: 15px;
     text-shadow: none;
@@ -59,28 +73,6 @@ header nav ul li a:hover {
 
 section {
     padding: 60px;
-}
-.hero {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start
-}
-.hero-form {
-  border: 3px solid #111661;
-  background-color: #a1c8f5;
-  padding: 20px;
-  color: #000000;
-  width: 40%;
-  margin: 3.5%;
-}
-.hero-cta {
-    width: 10%;
-    text-align: left;
-    margin: 3.5%;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    line-height: 1.2;
 }
 .intro p {
     line-height: 1.7;
@@ -92,7 +84,7 @@ section {
 }
 .my-movies-lists {
   text-align: center;
-  background-color: #a1c8f5;
+  background-color: #d6e4f5;
   font-size: 20px;
   margin: 0 auto;
   justify-content: center;
@@ -103,7 +95,7 @@ section {
 .movie-div {
   width: 20%;
   height: 200px;
-  border-color: #111661;
+  border-color: #74a8e2;
   border-width: 2px;
   margin: 20px 20px 20px 20px;
   justify-content: Left;
@@ -112,12 +104,12 @@ section {
 }
 
 .section-title {
-    font-size: 25px;
+    font-size: 30px;
     color: #000000;
     padding-bottom: 20px;
     text-align: left;
-    width: 10%;
-    border-bottom: 5px solid #111661;
+    width: 15%;
+    border-bottom: 5px solid #74a8e2;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -128,35 +120,11 @@ section {
         position: relative
       }
     
-      header h1 {
-        width: 100%;
-        text-align: center;
-      }
-    
-      header nav ul {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
-      }
-    
-      header nav ul li a {
-        font-size: 20px;
-      }
-    
       footer h2, footer div {
         text-align: center;
         width: 100%;
       }
-      .hero-cta, .hero-form {
-        width: 100%;
-      }
-      
-      .hero-cta {
-        text-align: center;
-      }
-      .section-title {
-        width: 80%;
-      }
+    
       
     }
   
@@ -170,9 +138,6 @@ section {
   
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
-    .hero-form button {
-        width: 100%;
-      }
     
       .section-title {
         width: 95%;
