@@ -1,1 +1,9 @@
-<div>{{name}}</div>
+{{#each Search}}
+<div class="col-sm-12 col-md-3 col-lg-2 movie text-center">
+    <img
+        src= {{Poster}}>
+    <button class="to-watch">To Watch</button>
+    <button class="watched">Watched</button>
+</div>
+
+{{/each}}
