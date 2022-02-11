@@ -112,6 +112,31 @@ section {
     border-bottom: 5px solid #74a8e2;
 }
 
+footer{
+  background-color: #74a8e2;
+  height: 50px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#ournames{
+  padding: 15px;
+}
+
+#cw {
+  padding: 15px;
+}
+
+#contact{
+  float: right;
+}
+
+#contactform{
+  float: right;
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
     header {
