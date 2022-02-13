@@ -5,4 +5,5 @@ searchBtn.addEventListener("click", function(event) {
     const searchString = document.querySelector("#search_text");
     window.open('/search?title='+searchString.value,'_self')
     searchString.value ="";
-})
+});
+
