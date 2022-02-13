@@ -7,11 +7,16 @@ class User extends Model {}
 
 User.init(
   {
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     // define columns
     user_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      primaryKey: true
+      allowNull: false
     },
     password : {
       type: DataTypes.STRING,
@@ -25,4 +30,6 @@ User.init(
     uinderscored: true,
     modelName: 'user',
   }
-);j
+);
+
+module.exports = User;

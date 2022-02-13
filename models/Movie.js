@@ -15,6 +15,10 @@ Movie.init(
     movie_name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    imdb_id: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {
