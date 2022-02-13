@@ -29,5 +29,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.0.22"
-  }
+  },
+  "keywords": []
 }
