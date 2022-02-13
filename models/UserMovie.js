@@ -1,29 +1,26 @@
 const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require('../config/connection.js');
-const Movie = require('./Movie.js');
-const User = require('./User.js');
+const sequelize = require('../config/connection');
+const Movie = require('./Movie');
+const User = require('./User');
 
-class Review extends Model {}
+class UserMovie extends Model {}
 
-Review.init(
+UserMovie.init(
   {
+    // define columns
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false, 
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },
-    review_score: {
-      // TO DO: Validate score between 1-5 (full integer)
-      type: DataTypes.INTEGER
     },
     movie_id: {
       type: DataTypes.INTEGER,
       references: {
         model: Movie,
         key: 'id'
-      },
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -31,6 +28,9 @@ Review.init(
         model: User,
         key: 'id'
       }
+    },
+    movie_shelf: {
+      type: DataTypes.ENUM('watched', 'to watch')
     }
   },
   {
@@ -38,8 +38,8 @@ Review.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: 'user_movie'
   }
 );
 
-module.exports = Review;
+module.exports = UserMovie;

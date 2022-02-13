@@ -5,13 +5,43 @@ body {
 }
 
 nav {
+    padding: 20px 20px;
     background-color: #74a8e2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
     height: 75px;
+}
+
+.navbar-brand.library {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-family: Monaco;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #ffffff;
+    left: -150px;
+    margin: 7px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    float: left;
+}
+.navbar-brand.library:hover {
+    background: #d6e4f5;
+    color: #111661;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 h1 {
     margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: georgia;
     font-size: 40px;
     font-weight: bold;
     color: 000000;
@@ -48,7 +78,7 @@ img {
     background-color: rgb(4, 60, 163);
     color: #ffffff;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Monaco;
     padding-left: 10px;
 }
 
@@ -59,14 +89,14 @@ img {
     border-radius: 3px;
     font-size: larger;
     font-weight:550;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Monaco;
 }
 
 input::placeholder {
     color: #ffffff;
     font-size: large;
     padding-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Monaco;
 }  
 
 input {

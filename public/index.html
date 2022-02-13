@@ -12,23 +12,15 @@
   <!-- navigation -->
   <header>
   <h1>My Movie Library</h1>
-    <nav>
-      <ul>
-        <li>
-            <a>My Movies</a>
-        </li>
-        <!-- Add link to search html page-->
-        <li>
-            <a>Search</a>
-        </li>
-      </ul>
-    </nav>
-    <nav>
+      <nav>
         <ul>
-          <li>
-              <!-- Login/Logout-->
+            <!-- Add link to search html page-->
+            <li>
+                <a href="/search">Search</a>
+            </li>
+            <li>
               <a>My Profile</a>
-          </li>
+            </li>
         </ul>
       </nav>
   </header>
@@ -40,12 +32,12 @@
             <!-- Hardcoded To watch movie divs-->
             <div class="movie-div">
                 <a href="">
-                    <img src="images/" alt=""  class="movieimg">ah
+                    <img src="images/" alt=""  class="movieimg">
                 </a>
             </div>
             <div class="movie-div">
                 <a href="">
-                    <img src="images/" alt=""  class="movieimg"/>ah
+                    <img src="images/" alt=""  class="movieimg"/>
                 </a>
             </div>
       </section>
@@ -55,16 +47,26 @@
         <h2 class="section-title section-border">Watched</h2>
         <div class="movie-div">
             <a href="">
-                <img src="images/" alt=""  class="movieimg"/>ah
+                <img src="images/" alt=""  class="movieimg"/>
             </a>
         </div>
         <div class="movie-div">
             <a href="">
-                <img src="images/" alt=""  class="movieimg"/>ah
+                <img src="images/" alt=""  class="movieimg"/>
             </a>
         </div>
       </section>
   </main>
+  <footer>
+      <a id="ournames">Bryce Stockman, Jessica Groves, Kai Whitney, Kayce Heap</a>
+      <a id="cw"> 2022 </a>
+      <form id="contactform">
+        <a> Contact Us </a>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit">
+      </form>
+  </footer>
   <script src="./assets/js/omdb.js"></script>
   <script src="./assets/js/delete-btn.js"></script>
   <script src="./assets/js/star-rating.js"></script>
