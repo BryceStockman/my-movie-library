@@ -11,7 +11,14 @@ User.belongsToMany(Movie, { through: UserMovie });
 Movie.belongsToMany(User, { through: UserMovie });
 
 // Movies Have many reviews
-Movie.hasMany(Review)
+Movie.hasMany(Review);
 
 // Users have Many reviews
-User.hasMany(Review)
+User.hasMany(Review);
+
+module.exports = {
+  Movie,
+  Review,
+  User,
+  UserMovie,
+};

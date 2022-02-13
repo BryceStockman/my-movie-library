@@ -15,7 +15,8 @@ Review.init(
       autoIncrement: true
     },
     review_score: {
-      type: DataTypes.Integer
+      // TO DO: Validate score between 1-5 (full integer)
+      type: DataTypes.INTEGER
     },
     movie_id: {
       type: DataTypes.INTEGER,

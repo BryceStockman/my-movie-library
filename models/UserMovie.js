@@ -28,6 +28,9 @@ UserMovie.init(
         model: User,
         key: 'id'
       }
+    },
+    movie_shelf: {
+      type: DataTypes.ENUM('watched', 'to watch')
     }
   },
   {
