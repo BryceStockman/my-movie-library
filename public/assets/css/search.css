@@ -53,17 +53,17 @@ h1 {
     font-weight: bold;
 }
 
-img {
+/*img {
     height: 90%;
     width: 90%;
    
 }
-
+*/
 .movie {
     background-color: #74a8e2;
     padding-top: 20px;
-    height: 550px;
-    width: 375px;
+    /*height: 550px;
+    width: 375px;*/
     margin: 50px;
     border-style: solid;
     border-color: black;
@@ -107,17 +107,19 @@ input {
 
 
 .to-watch {
-    margin: 10px 10px 0 0;
+    margin-top: 15px;
+    height: 40px;
     width: 150px;
+    font-family: Monaco;
     font-weight: bold;
     border-radius: 3px;
     background-color:#d6e4f5;
 }
 
 .watched {
-    margin: 10px 0 0 10px;
+    height: 40px;
     width: 150px;
-    font-weight: bold;
+    font-weight:bolder;
     border-radius: 3px;
     background-color: #d6e4f5;
 }
