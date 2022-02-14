@@ -5,10 +5,13 @@ const UserMovie = require ('./UserMovie');
 
 
 // Users belongToMany Movies (through UserMovie)
-User.belongsToMany(Movie, { through: UserMovie });
+//User.belongsToMany(Movie, { through: UserMovie, foreignKey: 'movie_id' });
 
 // Movies belongToMany Users (through UserMovie)
-Movie.belongsToMany(User, { through: UserMovie });
+//Movie.belongsToMany(User, { through: UserMovie, foreignKey: 'user_id' });
+
+UserMovie.belongsTo(User, {foreignKey: 'user_id'});
+UserMovie.belongsTo(Movie, {foreignKey: 'movie_id'});
 
 // Movies Have many reviews
 Movie.hasMany(Review);

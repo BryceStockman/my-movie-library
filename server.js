@@ -4,7 +4,8 @@ const routes = require('./routes');
 const path = require('path');
 
 const sequelize = require('./config/connection');
-
+const models = require('./models')
+//const seeds = require('./seeds')
 const hbs = exphbs.create({});
 
 const app = express();
