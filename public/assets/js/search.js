@@ -1,4 +1,3 @@
-console.log('inside search2')
 const searchBtn = document.querySelector("#search_btn");
 searchBtn.addEventListener("click", function (event) {
     event.preventDefault();
@@ -9,7 +8,8 @@ searchBtn.addEventListener("click", function (event) {
 
 function addUserMovie(event) {
     console.log(event.target.dataset.movie_id);
-
+    const token = localStorage.getItem('token')
+    console.log(token)
     // fetch('/api/user_movies',
     //     {
     //         method: 'GET'
@@ -24,10 +24,9 @@ function addUserMovie(event) {
         imdb_id: event.target.dataset.movie_id,
         movie_name: event.target.dataset.movie_name,
         movie_shelf: event.target.dataset.shelf,
-        user_id: "1"
     }
 
-    fetch('/api/user_movies',
+    fetch(`/api/user_movies?token=${token}`,
         {
             method: 'POST',
             headers: {
@@ -41,6 +40,6 @@ function addUserMovie(event) {
                 console.log(data)
             })
         })
+    }
 
 
-}
