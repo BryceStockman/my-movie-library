@@ -29,8 +29,10 @@
         {{#each Search}}
         <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
             <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
-            <button class="mx-auto my-auto to-watch" id="to-watch-btn" data-movieid={{imdbID}}>To Watch</button>
-            <button class="mx-auto my-auto watched" id="watched-btn" data-movieid={{imdbID}}>Watched</button>
+            <button onclick="addUserMovie(event)" data-shelf="to watch" data-movie_name="movie title"
+                data-movie_id="{{imdbID}}" class="mx-auto my-auto to-watch">To Watch</button>
+            <button onclick="addUserMovie(event)" data-shelf="watched" data-movie_name="movie title"
+                data-movie_id="{{imdbID}}" class="mx-auto my-auto watched">Watched</button>
         </div>
 
         {{/each}}
