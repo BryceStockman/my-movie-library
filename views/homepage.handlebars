@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/assets/css/delete-btn.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/output.css" />
+
 </head>
 
 <body>
@@ -18,12 +19,15 @@
                     <a href="/search">Search</a>
                 </li>
                 <li>
-                    <a>My Profile</a>
+                    <a id="logout-button">Logout</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
+        {{#if loading}}
+        <h1>Loading</h1>
+        {{else}}
         <section id="to-watch" class="my-movies-lists">
             <div class="flex-row">
                 <h2 class="section-title section-border">To Watch</h2>
@@ -46,6 +50,7 @@
 
                 {{/each}}
         </section>
+        {{/if}}
     </main>
 
     <footer>
@@ -61,5 +66,6 @@
     <script src="./assets/js/omdb.js"></script>
     <script src="./assets/js/delete-btn.js"></script>
     <script src="./assets/js/star-rating.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="/assets/js/homepage.js"></script>
+
 </body>
