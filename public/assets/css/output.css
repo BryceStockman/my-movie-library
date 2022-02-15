@@ -36,16 +36,16 @@
   width: 1rem
 }
 
+.w-full {
+  width: 100%
+}
+
 .w-375 {
   width: 375px
 }
 
 .w-5\/6 {
   width: 83.333333%
-}
-
-.w-full {
-  width: 100%
 }
 
 .grow {
@@ -104,6 +104,14 @@
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-450 {
+    height: 450px
+  }
+
+  .lg\:h-440 {
+    height: 440px
+  }
+
   .lg\:h-530 {
     height: 530px
   }
