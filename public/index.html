@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Movie Library</title>
+  <link rel="stylesheet" href="./assets/css/tailwind.css"/>
   <link rel="stylesheet" href="./assets/css/output.css"/>
 	<link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
@@ -24,6 +25,7 @@
         </ul>
       </nav>
   </header>
+
   <main> 
       <section id="to-watch" class="my-movies-lists">
             <div class="flex-row">
@@ -47,10 +49,18 @@
         </div>
       </section>
   </main>
+
   <footer>
-      <a id="ournames">Bryce Stockman, Jessica Groves, Kai Whitney, Kayce Heap</a>
-      <a id="cw"> 2022 </a>
-      
+    <div class="container">
+      <div class="footer-items">Bryce Stockman, Jessica Groves, Kai Whitney, Kayce Heap</div>
+      <div class="footer-items">Powered by: 
+       <ul>
+         <li>Tailwind CSS</li>
+         <li>The Open Movie Database</li>
+       </ul>
+      </div>
+      <div class="footer-items"> <script>document.write(/\d{4}/.exec(Date())[0])</script> </div>
+    </div>
   </footer>
   <script src="./assets/js/omdb.js"></script>
   <script src="./assets/js/search2.js"></script>

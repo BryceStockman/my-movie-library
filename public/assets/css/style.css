@@ -2,21 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
 }
 
 body {
   background-color: #d6e4f5;
   color: #ffffff;
   font-family: Monaco;
-  min-height: 100vh;
+  height: 100%;
+  position: relative;
 }
 
 header {
-  padding: 20px 20px;
+  padding: 20px;
   background-color: #74a8e2;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 75px;
 
   position: absolute;
   width: 100%;
@@ -30,6 +31,14 @@ header {
   background-attachment: fixed;
   background-position: 80%;
   z-index: 9999;
+}
+
+main {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
 }
 
 h1 {
@@ -112,34 +121,27 @@ section {
 
 footer {
   background-color: #74a8e2;
-  height: 50px;
-  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+footer .container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-#ournames {
+.footer-items {
   padding: 15px;
-}
-
-#cw {
-  padding: 15px;
-}
-
-#contact {
-  float: right;
-}
-
-#contactform {
-  float: right;
+  margin: 0 auto;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
   header {
-    padding-bottom: 0;
     justify-content: center;
     position: relative;
   }
