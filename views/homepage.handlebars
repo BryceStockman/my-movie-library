@@ -4,6 +4,7 @@
     <title>My Movie Library</title>
     <link rel="stylesheet" href="/assets/css/delete-btn.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/output.css" />
 </head>
 
 <body>
@@ -29,10 +30,7 @@
             </div>
             {{#each to_watch}}
             <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
-                <p>{{movie_id}}</p>
                 <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
-                <button class="mx-auto my-auto to-watch">To Watch</button>
-                <button class="mx-auto my-auto watched">Watched</button>
             </div>
 
             {{/each}}
@@ -43,15 +41,13 @@
                 <h2 class="section-title section-border">Watched</h2>
                 {{#each watched}}
                 <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
-                    <p>{{movie_id}}</p>
                     <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
-                    <button class="mx-auto my-auto to-watch">To Watch</button>
-                    <button class="mx-auto my-auto watched">Watched</button>
                 </div>
 
                 {{/each}}
         </section>
     </main>
+
     <footer>
         <a id="ournames">Bryce Stockman, Jessica Groves, Kai Whitney, Kayce Heap</a>
         <a id="cw"> 2022 </a>
