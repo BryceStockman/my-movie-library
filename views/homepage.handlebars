@@ -4,6 +4,7 @@
     <title>My Movie Library</title>
     <link rel="stylesheet" href="/assets/css/delete-btn.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/output.css" />
 </head>
 
 <body>
@@ -27,34 +28,26 @@
             <div class="flex-row">
                 <h2 class="section-title section-border">To Watch</h2>
             </div>
-            <!-- Hardcoded To watch movie divs-->
-            <div class="movie-div">
-                <a href="">
-                    <img src="images/" alt="" class="movieimg">
-                </a>
+            {{#each to_watch}}
+            <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
+                <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
             </div>
-            <div class="movie-div">
-                <a href="">
-                    <img src="images/" alt="" class="movieimg" />
-                </a>
-            </div>
+
+            {{/each}}
         </section>
         <!-- Hardcoded watched movie divs-->
         <section id="watched" class="my-movies-lists">
             <div class="flex-row">
                 <h2 class="section-title section-border">Watched</h2>
-                <div class="movie-div">
-                    <a href="">
-                        <img src="images/" alt="" class="movieimg" />
-                    </a>
+                {{#each watched}}
+                <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
+                    <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
                 </div>
-                <div class="movie-div">
-                    <a href="">
-                        <img src="images/" alt="" class="movieimg" />
-                    </a>
-                </div>
+
+                {{/each}}
         </section>
     </main>
+
     <footer>
         <a id="ournames">Bryce Stockman, Jessica Groves, Kai Whitney, Kayce Heap</a>
         <a id="cw"> 2022 </a>
