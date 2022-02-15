@@ -9,8 +9,6 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: -webkit-sticky;
-  position: sticky;
   height: auto;
 }
 
