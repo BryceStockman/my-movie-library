@@ -9,15 +9,21 @@ const models = require('./models')
 const hbs = exphbs.create({});
 
 const app = express();
+
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(routes);
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 const PORT = process.env.PORT || 3001;
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 
 sequelize.sync({ force: false }).then(() => {
