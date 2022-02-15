@@ -1,0 +1,39 @@
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' type='text/css' href='/assets/css/output.css' />
+    {{!
+    <script src="https://cdn.tailwindcss.com"></script> }}
+    <link rel='stylesheet' type='text/css' href='/assets/css/search.css' />
+
+    <title>Movie Search</title>
+</head>
+
+<body>
+    <nav class='navbar w-full'>
+        <h1>Find A Movie</h1>
+        <a href='/' class='navbar-brand library'>Back to library</a>
+    </nav>
+
+    <div>
+        <form>
+            <div class='flex flex-wrap justify-center lg:justify-start'>
+                <input type='text' id='search_text' placeholder='Find Your Next Favorite Movie Here...' />
+                <button type='submit' id='search_btn' value='search'>Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div class='flex flex-wrap justify-center items-center' id='movie-display'>
+        {{#each Search}}
+        <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
+            <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
+            <button class="mx-auto my-auto to-watch">To Watch</button>
+            <button class="mx-auto my-auto watched">Watched</button>
+        </div>
+
+        {{/each}}
+    </div>
+</body>
+<script src='/assets/js/search2.js'></script>

@@ -31,25 +31,16 @@ header {
   background-attachment: fixed;
   background-position: 80%;
   z-index: 9999;
+  }
+  h1 {
+    margin-left: 10px;
+    font-family: georgia;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(10, 37, 78, 0.527);
 }
-
-main {
-  min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 100px; /* height of your footer */
-}
-
-h1 {
-  margin-left: 10px;
-  font-family: georgia;
-  font-size: 40px;
-  font-weight: bold;
-  color: 000000;
-  text-shadow: 0 0 10px rgba(10, 37, 78, 0.527);
-}
-
+  
 header a {
   text-decoration: none;
   color: #ffffff;
