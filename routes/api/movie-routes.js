@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const jwt = require('jsonwebtoken')
 const sequelize = require('../../config/connection');
 
 const { UserMovie, Movie, User } = require('../../models');
@@ -21,9 +21,13 @@ router.get('/', (req, res) => {
 })
 
 
+
 router.post('/', (req, res) => {
+    const token = req.query.token
     // expects req.body.movie_id req.body.user_id, req.body.imdb_id
     // check to see if this movie exists in the movie table
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET)
+    const userId = decodedToken.id
     Movie.findOne(
         {
             where: {
@@ -36,7 +40,7 @@ router.post('/', (req, res) => {
 
             console.log("Movie found",movie)
 
-            addUserMovie(movie.id, 1, req.body.movie_shelf)
+            addUserMovie(movie.id, userId, req.body.movie_shelf)
             res.json(movie)
         }
         else {
@@ -48,7 +52,7 @@ router.post('/', (req, res) => {
                 movie_name: req.body.movie_name,
             }).then(async dbmovieData => {
                 console.log(dbmovieData);
-                addUserMovie(dbmovieData.id, 1, req.body.movie_shelf)
+                addUserMovie(dbmovieData.id, userId, req.body.movie_shelf)
                 res.json(dbmovieData)
             })
         }

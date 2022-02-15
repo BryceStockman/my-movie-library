@@ -11,19 +11,27 @@
 </head>
 
 <body>
-    <nav class="navbar w-full">
-        <h1>My Movie Library</h1>
+    <header>
+        <nav class="navbar w-full">
+            <h1>My Movie Library</h1>
+            <nav>
+                <ul>
+                    <!-- Add link to search html page-->
+                    <li>
+                        <a href="/search">Search</a>
+                    </li>
+                    <li>
+                        <a id="logout-button">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    {{#if loading}}
+    <h1>Loading</h1>
+    {{else}}
 
-        <ul>
-            <!-- Add link to search html page-->
-            <li>
-                <a href="/search">Search for a Movie</a>
-            </li>
-            <li>
-                <a>Login</a>
-            </li>
-        </ul>
-    </nav>
+
+
 
     <h2 class="section-title section-border">To Watch</h2>
 
@@ -48,6 +56,7 @@
 
         {{/each}}
     </div>
+    {{/if}}
 </body>
 
 
@@ -66,7 +75,8 @@
     </div>
 </footer>
 <script src="./assets/js/omdb.js"></script>
-{{!-- //<script src="./assets/js/delete-btn.js"></script> --}}
+{{!-- //
+<script src="./assets/js/delete-btn.js"></script> --}}
 <script src="./assets/js/star-rating.js"></script>
-{{!-- //<script src="./assets/js/script.js"></script> --}}
+<script src="./assets/js/homepage.js"></script>
 </body>
