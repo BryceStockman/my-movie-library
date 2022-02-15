@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
             })
         }
 
-        await sleep(2000);
+        await sleep(1000);
 
         const toWatch = movieData.filter(movie => movie.movie_shelf === 'to watch');
         const watched = movieData.filter(movie => movie.movie_shelf === 'watched');
@@ -55,6 +55,7 @@ router.get('/search', (req, res) => {
                 if (data.Response === 'False') {
                     console.log('Please enter a valid movie title');
                 } else {
+                    console.log(data)
                     res.render('search', data);
                 }
             });
