@@ -27,32 +27,29 @@
             <div class="flex-row">
                 <h2 class="section-title section-border">To Watch</h2>
             </div>
-            <!-- Hardcoded To watch movie divs-->
-            <div class="movie-div">
-                <a href="">
-                    <img src="images/" alt="" class="movieimg">
-                </a>
+            {{#each to_watch}}
+            <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
+                <p>{{movie_id}}</p>
+                <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
+                <button class="mx-auto my-auto to-watch">To Watch</button>
+                <button class="mx-auto my-auto watched">Watched</button>
             </div>
-            <div class="movie-div">
-                <a href="">
-                    <img src="images/" alt="" class="movieimg" />
-                </a>
-            </div>
+
+            {{/each}}
         </section>
         <!-- Hardcoded watched movie divs-->
         <section id="watched" class="my-movies-lists">
             <div class="flex-row">
                 <h2 class="section-title section-border">Watched</h2>
-                <div class="movie-div">
-                    <a href="">
-                        <img src="images/" alt="" class="movieimg" />
-                    </a>
+                {{#each watched}}
+                <div class="mx-auto justify-center movie sm:h-400 lg:h-530 w-375 text-center">
+                    <p>{{movie_id}}</p>
+                    <img class="mx-auto sm:h-1/2 md:h-5/6 lg:h-5/6 w-5/6" src={{Poster}}>
+                    <button class="mx-auto my-auto to-watch">To Watch</button>
+                    <button class="mx-auto my-auto watched">Watched</button>
                 </div>
-                <div class="movie-div">
-                    <a href="">
-                        <img src="images/" alt="" class="movieimg" />
-                    </a>
-                </div>
+
+                {{/each}}
         </section>
     </main>
     <footer>
